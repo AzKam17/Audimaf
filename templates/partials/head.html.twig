@@ -1,0 +1,136 @@
+<header id="header-id" class="main-header third_header">
+    <div class="header-top clearfix">
+        <div class="header_contact clearfix ul-li">
+            <ul>
+                <li><i class="far fa-envelope"></i> <span>contact@audimaf.com</span></li>
+                <li><i class="fas fa-phone"></i> <span>+225 27 23 55 43 65 / +225 05 05 50 03 54</span></li>
+                {# <li><i class="fas fa-map-marker-alt"></i> <span>Abidjan, Cocody en face de la mosqué d'angré</span></li> #}
+            </ul>
+        </div>
+        <div class="header-top_right float-right">
+            <div class="header_social  ul-li">
+                <!-- <div class="lang-select relative-position float-left">
+                    <select>
+                        <option value="9" selected="">ENG</option>
+                        <option value="10">BAN</option>
+                        <option value="11">ARB</option>
+                        <option value="12">SPN</option>
+                    </select>
+                </div> -->
+                <div class="header_social float-right ul-li">
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Abidjan, Cocody en face de la mosqué d'angré - {{ "now"|date("d/m/Y", "Europe/Paris") }}</span></li>
+                        <li class="h-fb"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        {# <li class="h-tw"><a href="#"><i class="fab fa-twitter"></i></a></li> #}
+                        {# <li class="h-bh"><a href="#"><i class="fab fa-behance"></i></a></li> #}
+                        <li class="h-lk"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        {# <li class="h-yo"><a href="#"><i class="fab fa-youtube"></i></a></li> #}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-menu-header clearfix relative-position">
+        <div class="brand-logo float-left ">
+            <a href="{{ path("homepage") }}"><img id="logo" src="/assets/img/logo/logo1.png" alt="logo"></a>
+        </div>
+        <div class="q-btn_1 float-right text-center">
+            <a class="block-display " href="{{ path("contact") }}"> Nous joindre</a>
+        </div>
+        <nav class="main-navigation float-right nav-menu-1 clearfix ul-li">
+            <ul id="main-nav" class="nav navbar-nav clearfix">
+
+                <li><a href="{{ path("homepage") }}">Accueil</a></li>
+                <li><a href="{{ path("presentation") }}">Le cabinet</a></li>
+                <li><a href="{{ path("nosvaleurs") }}">Nos valeurs et éthique</a></li>
+                <li class="menu-item-has-child">
+					<a href="{{ path("services") }}">Services</a>
+					<ul class="sub-menu clearfix">
+                        {{ render(path('services_list_header')) }}     
+					</ul>
+				</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile_menu">
+        <div class="mobile_menu_wrap">
+            <i class="open_bar menu_trigger  fas fa-list-ul"></i>
+            <div  class="wide_sidebar">
+                <div class="side_bar_overlay open_bar"></div>
+                <div class="wide_sidebar_content pera-content headline">
+                    <div class="w-brand-logo">
+                        <a href="{{ path("homepage") }}"><img src="/assets/img/logo/logo2.png" alt="logo"></a>
+                    </div>
+                    <!-- <div class="mobile_search-bar relative-position">
+                        <div class="form-item">
+                            <form action="#">
+                                <input type="search" placeholder="Search...">
+                                <button type="submit" class="form-item-btn"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                    <div class="pages-list">
+                        <ul class="list-unstyled components">
+                            <li>
+								<a href="{{ path("homepage") }}">
+									<span class="menu_icon text-center"><i class="fas fa-user"></i></span>
+										Accueil
+								</a>
+							</li>
+                            <li>
+								<a href="{{ path("presentation") }}">
+									<span class="menu_icon text-center"><i class="fas fa-users"></i></span>
+										Le cabinet
+								</a>
+							</li>
+                            <li>
+								<a href="{{ path("nosvaleurs") }}">
+									<span class="menu_icon text-center"><i class="fas fa-bookmark"></i></span>
+										Nos valeurs et éthique
+								</a>
+							</li>
+                            <li class="menu-item-has-child active">
+								<a href="{{ path("services") }}" data-toggle="collapse" aria-expanded="false">
+									<span class="menu_icon text-center"><i class="fas fa-bookmark"></i></span>
+										Services
+								</a>
+                                <ul class="sub-menu collapse list-unstyled" id="home_sub">
+                                    {{ render(path('services_list_header')) }}                         						
+                                </ul>
+							</li>
+                            <li>
+								<a href="{{ path("contact") }}">
+										<span class="menu_icon text-center"><i class="fas fa-phone"></i></span>
+										Nous joindre
+								</a>
+							</li>
+								
+                        </ul>
+                    </div>
+                    <p class="page_headline">Contacts :</p>
+                    <div class="mobile_menu_contact ul-li-block">
+                        <ul>
+                            <li><i class="far fa-envelope"></i> <span>contact@audimaf.com</span></li>
+                            <li><i class="fas fa-phone"></i> <span>+225 27 23 55 43 65 / +225 05 05 50 03 54</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span>Abidjan, Cocody en face de la mosqué d'angré</span></li>
+                        </ul>
+                    </div>
+                    <p class="page_headline">Suivez nous sur:</p>
+                    <div class="mobile_menu_follow clearfix ul-li">
+                        <ul>
+                            <li class="h-fb"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="h-tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="h-bh"><a href="#"><i class="fab fa-behance"></i></a></li>
+                            <li class="h-lk"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="h-yo"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="side_copyright">Copyright By@ Devs -2021</div>
+                    <div class="wide_sidebar_collapse open_bar">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
